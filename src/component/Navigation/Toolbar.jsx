@@ -1,16 +1,19 @@
 import React from 'react'
+import { IoMenu } from "react-icons/io5";
 
 function Toolbar() {
   return (
     <div className='bg-sky-500 shadow-lg'>
     <div className='w-10/12 mx-auto py-4 flex text-white justify-between'>
-      <div>
-        LOGO and LINK
+      <div className='flex gap-4'>
+       <div className='text-2xl md:text-4xl font-semibold'>LOGO</div>
+       <div className='hidden md:flex gap-4'>LINKS</div>
       </div>
-      <div>
-        <button className='w-'>Sign In</button>
-        <button className='w-'>Sign Up </button>
+      <div className='hidden md:flex gap-4'>
+        <button className='w-fit h-fit px-6 py-3 border border-white text-sm capitalize'>Sign In</button>
+        <button className='w-fit h-fit px-6 py-3 border border-white text-sm capitalize text-sky-500 bg-white'>Sign Up </button>
       </div>
+      <IoMenu className='text-4xl md:hidden' />
     </div>
     </div>
   )
